@@ -107,7 +107,7 @@ As pastas desse projeto foi se baseado em alguns projetos e a arquitetura de alg
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/tiagodnzz/atom_movies.git
+$ git clone https://github.com/tiagodnzz/atom-movies.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd atom-movies
