@@ -1,0 +1,74 @@
+@import "../../../assets/scss/variables.scss";
+
+.card-movie {
+  width: 100%;
+  height: auto;
+  background: $color-shape;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  border: 2px solid $color-background;
+
+  &:hover {
+    background: $color-shape-hover;
+    border: 2px solid $color-primary;
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  img,
+  .no-image {
+    width: 100%;
+    height: 320px;
+    object-fit: fill;
+    transition: all 0.5s ease;
+  }
+
+  .no-image {
+    background: $color-text;
+  }
+
+  &-body {
+    padding: 24px;
+    flex: 1;
+    h3 {
+      color: $color-secondary;
+      font-size: 30px;
+      line-height: 117%;
+      font-weight: 700;
+    }
+  }
+
+  &-footer {
+    padding: 0 24px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: $color-text;
+      font-size: 15px;
+      line-height: 167%;
+    }
+  }
+
+  button {
+    padding: 18px 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-movie {
+    height: 610px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-movie {
+    height: 580px;
+  }
+}

@@ -1,0 +1,65 @@
+<section class="banner-details" [ngStyle]="addBackground()">
+  <div class="container h-100">
+    <header>
+      <a (click)="handleNavigateToHome()">
+        <img class="mr-3" src="./assets/img/arrow-left.svg" alt="icon arrow left">
+        voltar
+      </a>
+    </header>
+    <main>
+      <img src="https://image.tmdb.org/t/p/original/{{movie?.poster_path}}" alt="image of ">
+
+      <div class="right-column">
+        <div class="title mt-3">
+          <h1>{{movie?.title}}</h1>
+          <span class="ml-3">({{movie?.release_date | date: 'yyyy'}})</span>
+        </div>
+
+        <div class="information mt-2">
+          <span class="release">{{movie?.release_date | date: 'dd/MM/yyyy'}}</span>
+          <div class="genres">
+            <span *ngFor="let genre of movie?.genres; let last = last">
+              {{genre.name}}
+              <b *ngIf="!last">,</b>
+            </span>
+          </div>
+          <span class="runtime">{{formatMinutesToHours(movie?.runtime)}}</span>
+        </div>
+
+        <div class="evaluation mt-3">
+          <div class="average" [ngClass]="{
+            'border-green': movie?.vote_average >= 7.0,
+            'border-orange': movie?.vote_average < 7.0
+            }">
+            <h5>{{movie?.vote_average * 0.1 | percent}}</h5>
+          </div>
+          <p>Avaliações dos usuário</p>
+        </div>
+
+        <div class="overview mt-3">
+          <span><i>{{movie?.tagline}}</i></span>
+          <h6 class="mt-2">Sinopse</h6>
+          <p>{{movie?.overview}}</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<main class="container casts">
+
+  <h2 class="mt-4">Elenco</h2>
+  <div class="row">
+    <div *ngFor="let itemCast of casts" class="col-md-6 col-xl-3">
+      <card-cast [castItem]="itemCast"></card-cast>
+    </div>
+  </div>
+
+  <h2 class="mt-4">Equipe técnica</h2>
+  <div class="row mt-3">
+    <div *ngFor="let itemCrew of crew" class="col-md-4 col-xl-3">
+      <card-crew [crewItem]="itemCrew"></card-crew>
+    </div>
+  </div>
+
+</main>

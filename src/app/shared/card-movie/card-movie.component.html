@@ -1,0 +1,17 @@
+<div class="card-movie">
+  <div *ngIf="!movieItem.poster_path" class="no-image"></div>
+  <img *ngIf="movieItem.poster_path" src="https://image.tmdb.org/t/p/w220_and_h330_face/{{movieItem.poster_path}}" alt="image of movie {{movieItem.original_title}}">
+  <main class="card-movie-body">
+    <h3>{{movieItem.original_title | slice: 0:30}}</h3>
+  </main>
+  <footer class="card-movie-footer">
+    <span>{{movieItem.release_date | date: 'dd/MM/yyyy'}}</span>
+    <div class="average" [ngClass]="{
+        'border-green': movieItem.vote_average >= 7.0,
+        'border-orange': movieItem.vote_average < 7.0
+    }">
+      <h5>{{movieItem.vote_average * 0.1 | percent}}</h5>
+    </div>
+  </footer>
+  <button class="button" (click)="handleNavigateToDetails(movieItem.id)">Detalhes</button>
+</div>

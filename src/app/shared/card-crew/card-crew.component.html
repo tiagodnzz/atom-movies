@@ -1,0 +1,9 @@
+<div class="card-crew">
+  <div *ngIf="!crewItem.profile_path" class="no-profile"></div>
+  <img *ngIf="crewItem.profile_path" src="https://image.tmdb.org/t/p/w138_and_h175_face/{{crewItem.profile_path}}"
+      alt="image of movie {{crewItem.character}}">
+  <main class="card-movie-body">
+      <h3>{{crewItem.name | slice: 0:30}}</h3>
+      <span>{{crewItem.job}}</span>
+  </main>
+</div>

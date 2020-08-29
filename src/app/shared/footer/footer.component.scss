@@ -1,0 +1,33 @@
+footer {
+  background: url("../../../assets/img/footer.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 16px;
+  img {
+    width: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    height: 110px;
+
+    img {
+      width: 150px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    height: 250px;
+    padding-bottom: 24px;
+    img {
+      width: 300px;
+    }
+  }
+}

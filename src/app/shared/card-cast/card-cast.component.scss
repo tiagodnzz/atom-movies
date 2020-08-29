@@ -1,0 +1,36 @@
+@import '../../../assets/scss/variables.scss';
+
+.card-cast {
+  width: 100%;
+  height: min-content;
+  background: $color-shape;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  border-right: 2px solid $color-primary;
+
+  img, .no-profile {
+    width: 96px;
+    height: 120px;
+    object-fit: cover;
+    background: $color-secondary;
+  }
+
+  main {
+    padding: 0 16px;
+    flex: 1;
+    h3 {
+      font-size: 18px;
+      color: $color-secondary;
+    }
+  
+    span {
+      color: $color-primary;
+      font-size: 14px;
+    }
+  }
+
+  &:hover {
+    background: $color-shape-hover;
+  }
+}

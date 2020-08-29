@@ -1,0 +1,112 @@
+.banner {
+  background: url("../../../assets/img/waveagrande.png") no-repeat;
+  background-size: 100%;
+  height: 100px;
+}
+.banner img {
+  width: 156px;
+}
+
+.search .badges {
+  display: none;
+}
+.search-input-group label {
+  display: flex;
+  position: relative;
+}
+.search-input-group label > input {
+  outline: 0;
+  width: 100%;
+  background-color: #202024;
+  border: 2px solid #202024;
+  border-radius: 4px;
+  padding: 12px 16px;
+  padding-right: 40px;
+  color: #fff;
+  font-size: 16px;
+  transition: 180ms ease-in-out;
+}
+.search-input-group label > input ~ svg {
+  stroke: #a8a8b3;
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+  transition: 180ms ease-in-out;
+}
+.search-input-group label > input::placeholder {
+  color: #a8a8b3;
+}
+.search-input-group label > input:focus {
+  border: 2px solid #8257e6;
+}
+.search-input-group label > input:focus ~ svg {
+  stroke: #8257e6;
+}
+.search footer {
+  background: url("../../../assets/img/footer.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+}
+.search footer img {
+  width: 100px;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 170px;
+  }
+  .banner img {
+    width: 270px;
+  }
+
+  .search .badges {
+    display: unset;
+  }
+  .search .badges .badge {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    border: 2px solid #8257e6;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .search .badges .badge-active {
+    background: #8257e6;
+    color: #fff;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+  }
+  footer img {
+    width: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  .banner {
+    background: url("../../../assets/img/wave.png") no-repeat;
+    background-size: 100%;
+    height: 150px;
+  }
+  .banner img {
+    width: 250px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+  }
+  footer img {
+    width: 300px;
+  }
+}

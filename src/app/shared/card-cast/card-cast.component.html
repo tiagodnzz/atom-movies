@@ -1,0 +1,9 @@
+<div class="card-cast">
+    <div *ngIf="!castItem.profile_path" class="no-profile"></div>
+    <img *ngIf="castItem.profile_path" src="https://image.tmdb.org/t/p/w138_and_h175_face/{{castItem.profile_path}}"
+        alt="image of movie {{castItem.character}}">
+    <main class="card-movie-body">
+        <h3>{{castItem.character | slice: 0:30}}</h3>
+        <span>{{castItem.name}}</span>
+    </main>
+</div>

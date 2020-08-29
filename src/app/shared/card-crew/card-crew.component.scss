@@ -1,0 +1,37 @@
+@import "../../../assets/scss/variables.scss";
+
+.card-crew {
+  width: 100%;
+  height: min-content;
+  background: $color-shape;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  border-right: 2px solid $color-green;
+
+  img,
+  .no-profile {
+    width: 52px;
+    height: 64px;
+    object-fit: cover;
+    background: $color-secondary;
+  }
+
+  main {
+    padding: 0 16px;
+    flex: 1;
+    h3 {
+      font-size: 14px;
+      color: $color-secondary;
+    }
+
+    span {
+      color: $color-green;
+      font-size: 12px;
+    }
+  }
+
+  &:hover {
+    background: $color-shape-hover;
+  }
+}

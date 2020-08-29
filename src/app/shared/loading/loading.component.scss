@@ -1,0 +1,45 @@
+@import "../../../assets/scss/variables.scss";
+
+.stopped {
+    display: none;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-background;
+}
+
+.loadingInitial {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    position: fixed;
+
+    &:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid $color-secondary;
+        border-color: $color-secondary transparent $color-secondary transparent;
+        animation: loadingInitial 1.2s linear infinite;
+    }
+}
+@keyframes loadingInitial {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
